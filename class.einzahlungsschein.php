@@ -33,6 +33,7 @@
     *breaks down, has to be carried from stage*
 /* ------------------------------------------------------------------------ */
 /* History:
+/* 2011/02/14 - Manuel Reinhard - added project to Github, again
 /* 2010/05/06 - Manuel Reinhard - added project to Github
 /* 2010/05/06 - Manuel Reinhard - corrected position on bottom line after feedback from bank
 /* 2010/04/24 - Manuel Reinhard - when it all started
