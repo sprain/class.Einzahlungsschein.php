@@ -8,7 +8,6 @@
 /* Manuel Reinhard, manu@sprain.ch
 /* Twitter: @sprain
 /* Web: www.sprain.ch
-/* Beware, known for being one sandwich short of a picnic.
 /* ------------------------------------------------------------------------ 
 	Copyright (C) 2010-2011  Manuel Reinhard
 	
