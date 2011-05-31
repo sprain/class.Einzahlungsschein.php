@@ -10,6 +10,8 @@
 /* Web: www.sprain.ch
 /* Beware, known for being one sandwich short of a picnic.
 /* ------------------------------------------------------------------------ 
+	Copyright (C) 2010-2011  Manuel Reinhard
+	
 	This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -33,6 +35,7 @@
     *breaks down, has to be carried from stage*
 /* ------------------------------------------------------------------------ */
 /* History:
+/* 2011/05/31 - Manuel Reinhard - improved behaviour of $this->ezs_bankingCustomerIdentification, minor bugfixes
 /* 2011/02/14 - Manuel Reinhard - added project to Github, again
 /* 2010/05/06 - Manuel Reinhard - added project to Github
 /* 2010/05/06 - Manuel Reinhard - corrected position on bottom line after feedback from bank
@@ -135,10 +138,14 @@ class createEinzahlungsschein {
 	 * @return bool
 	 */
 	 public function setRecipientData($recipientName, $recipientAddress, $recipientCity, $bankingCustomerIdentification){
+	 
+	 	//basic check of bankingCustomerIdentification
+	 	if(strlen($bankingCustomerIdentification) > 6){throw new Exception('bankingCustomerIdentification cannot be longer than 6 digits.');}
+	 
 	 	$this->ezs_recipientName    = $recipientName;
 	 	$this->ezs_recipientAddress = $recipientAddress;
 	 	$this->ezs_recipientCity    = $recipientCity;
-	 	$this->ezs_bankingCustomerIdentification = $bankingCustomerIdentification;
+	 	$this->ezs_bankingCustomerIdentification = $bankingCustomerIdentification;	 	
 	 	return true;
 	 }//function
 	
@@ -319,6 +326,7 @@ class createEinzahlungsschein {
 	*/
 	private function modulo10($number) {
 		$table = array(0,9,4,6,8,2,7,1,3,5);
+		$next = 0;
 		for ($i=0; $i<strlen($number); $i++) {
 			$next = $table[($next + substr($number, $i, 1)) % 10];
 		}//for		
@@ -337,7 +345,8 @@ class createEinzahlungsschein {
 		$completeReferenceNumber = str_pad($this->ezs_referenceNumber, 20 ,'0', STR_PAD_LEFT);
 	
 		//add customer identification code
-		$completeReferenceNumber = $this->ezs_bankingCustomerIdentification.$completeReferenceNumber;
+		$completeReferenceNumber = str_pad($this->ezs_bankingCustomerIdentification, 6, '0', STR_PAD_RIGHT).
+								   $completeReferenceNumber;
 		
 		//add check digit
 		$completeReferenceNumber .= $this->modulo10($completeReferenceNumber);
