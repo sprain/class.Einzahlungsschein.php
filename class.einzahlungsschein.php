@@ -16,6 +16,8 @@
  * ------------------------------------------------------------------------ 
  * Installation:
  * - Get FPDF http://fpdf.org/
+ * - Get OCRB font http://sprain.ch/blog/wp-content/uploads/2010/04/OCRB_FPDFConverted.zip
+ * - Move OCRB font files into the font folder of the FPDF class
  * - See example.php and get started
  * ------------------------------------------------------------------------ 
  * Thanks to:
