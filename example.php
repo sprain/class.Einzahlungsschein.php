@@ -1,6 +1,6 @@
 <?php
 require_once('class.Einzahlungsschein.php');
-require_once('../fpdf/fpdf.php');
+require_once('fpdf/fpdf.php');
 
 $amount= "150.20";
 $ref="5000001195";
