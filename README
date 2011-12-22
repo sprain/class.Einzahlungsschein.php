@@ -1,7 +1,8 @@
 /* ------------------------------------------------------------------------          
- * 	class.einzahlungsschein.php											
- *	Eine Klasse um Einzahlungsscheine mit ESR-Nummer als PDF zu erstellen.
- *  A class to create Swiss payment slips with ESR number in pdf format.
+ * class.einzahlungsschein.php											
+ * Eine Klasse um Einzahlungsscheine mit ESR-Nummer als PDF zu erstellen.
+ * A class to create Swiss payment slips with ESR number in pdf format.
+ * See http://sprain.ch/blog/downloads/class-esr-besr-einzahlungsschein-php/
  * ------------------------------------------------------------------------ 
  * Manuel Reinhard, manu@sprain.ch
  * Twitter: @sprain
