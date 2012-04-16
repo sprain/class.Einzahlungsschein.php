@@ -215,9 +215,9 @@ class Einzahlungsschein {
 	 
 	 	//Set basic stuff
 	 	if(!$this->pdf){
-	 		$this->pdf = new PDF($this->landscapeOrPortrait,'mm',$this->format);
+	 		$this->pdf = new FPDF($this->landscapeOrPortrait,'mm',$this->format);
 			$this->pdf->AddPage();
-			$this->pdf->SetAutoPageBreak(margin,0);
+			$this->pdf->SetAutoPageBreak(0);
 	 	}//if
 	    
 	    
