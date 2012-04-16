@@ -26,10 +26,14 @@
  * http://www.fpdf.de/ for the pdf class
  * -----------------------------------------------------------------------
  * History:
+ * 2012/04/16 - Manuel Reinhard - added functionality for red Einzahlungsscheine
+ *								- added possibility of $ezs_payerFullAddress 
+ *								- changed class name to Einzahlungsschein
+ *								- several minor improvements
  * 2011/12/22 - Manuel Reinhard - got rid of GNU license. Do whatever you want with it.
  * 2011/05/31 - Manuel Reinhard - improved behaviour of $this->ezs_bankingCustomerIdentification, minor bugfixes
  * 2011/02/14 - Manuel Reinhard - added project to Github, again
  * 2010/05/06 - Manuel Reinhard - added project to Github
  * 2010/05/06 - Manuel Reinhard - corrected position on bottom line after feedback from bank
  * 2010/04/24 - Manuel Reinhard - when it all started
- * ------------------------------------------------------------------------ */  
+ * ------------------------------------------------------------------------ */
