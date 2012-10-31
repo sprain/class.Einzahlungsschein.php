@@ -522,7 +522,7 @@ class Einzahlungsschein {
 		}//if
 		
 		//chop it into blocks
-		$string = chunk_split($string, $blocksize);
+		$string = trim(chunk_split($string, $blocksize, ' '));
 		
 		//re-reverse
 		if($alignFromRight){
