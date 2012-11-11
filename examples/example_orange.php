@@ -4,6 +4,8 @@ require __DIR__.'/../vendor/autoload.php';
 use Gridonic\ESR\Einzahlungsschein;
 use fpdf\FPDF;
 
+define('FPDF_FONTPATH', __DIR__.'/../src/Gridonic/ESR/Resources/font');
+
 $amount= "150.20";
 $ref="5000001195";
 
@@ -16,7 +18,7 @@ $pdf->SetFont('Arial','',9);
 $pdf->Cell(50, 4, "Just some dummy text.");
 
 //now simply include your Einzahlungsschein, sending your pdf instance to the Einzahlungsschein class
-$ezs = new Einzahlungsschein(196, 0, $pdf);
+$ezs = new Einzahlungsschein(191, 0, $pdf);
 $ezs->setBankData("Berner Kantonalbank AG", "3001 Bern", "01-200000-7");
 $ezs->setRecipientData("My Company Ltd.", "Exampleway 61", "3001 Bern", "123456");
 $ezs->setPayerData("Heinz Müller", "Beispielweg 23", "3072 Musterlingen");

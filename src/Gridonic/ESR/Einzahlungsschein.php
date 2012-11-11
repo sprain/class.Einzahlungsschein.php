@@ -4,8 +4,6 @@ namespace Gridonic\ESR;
 
 use fpdf\FPDF;
 
-define('FPDF_FONTPATH', __DIR__.'/Resources/fonts');
-
 /**
  * The actual class
  *
@@ -355,17 +353,16 @@ class Einzahlungsschein {
 
 
             //Set bottom line
-            $this->pdf->AddFont('OCRB10', '', '../../../../../../src/Gridonic/ESR/Resources/font/ocrb10.php');
+            $this->pdf->AddFont('OCRB10');
             $this->pdf->SetFont('OCRB10','',10);
             $this->pdf->SetXY($this->marginLeft+67, $this->marginTop+85);
             $this->pdf->Cell(140,4,$bottomLineString, 0, 0, "R");
 
-        }else{
+        } else {
 
             //set font
             $this->pdf->AddFont('OCRB10');
             $this->pdf->SetFont('OCRB10','',10);
-
 
             //add banking account
             $bottomLineString = '';
