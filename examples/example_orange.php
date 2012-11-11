@@ -1,6 +1,8 @@
 <?php
-require_once('class.einzahlungsschein.php');
-require_once('fpdf/fpdf.php');
+require __DIR__.'/../vendor/autoload.php';
+
+use Gridonic\ESR\Einzahlungsschein;
+use fpdf\FPDF;
 
 $amount= "150.20";
 $ref="5000001195";

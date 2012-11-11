@@ -3,6 +3,7 @@
     "description": "A class to create Swiss payment slips with ESR number in pdf format.",
     "license": "MIT",
     "require": {
+        "php": ">=5.3.0",
         "itbz/fpdf": "1.7.1"
     },
     "authors": [
@@ -14,5 +15,10 @@
             "name": "Peter Siska",
             "email": "pesche@gridonic.ch"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "Gridonic\\ESR": "src"
+        }
+    }
 }
