@@ -10,7 +10,7 @@ use fpdf\FPDF;
  * Eine Klasse um Einzahlungsscheine mit ESR-Nummer als PDF zu erstellen.
  * A class to create Swiss payment slips with ESR number in pdf format.
  */
-class Einzahlungsschein {
+class CreditSlip {
 
 
     //margins in mm
