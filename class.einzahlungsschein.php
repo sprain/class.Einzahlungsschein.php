@@ -74,6 +74,7 @@ class Einzahlungsschein {
 			$this->pdf = $pdfObject;
 		}//if
 		
+		$this->pathToImage = __DIR__.'/';
 	}
 	
 	
