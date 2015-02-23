@@ -351,7 +351,6 @@ class Einzahlungsschein {
 			if($this->ezs_amount == 0){
 				$bottomLineString .= "042>";
 			}else{		
-				$amountParts = explode(".", $this->ezs_amount);
 				$bottomLineString .= "01";
 				$bottomLineString .= str_pad($amountParts[0], 8 ,'0', STR_PAD_LEFT);
 				$bottomLineString .= str_pad($amountParts[1], 2 ,'0', STR_PAD_RIGHT);
