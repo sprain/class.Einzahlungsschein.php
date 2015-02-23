@@ -219,7 +219,7 @@ class Einzahlungsschein {
 
 		//Place money amount (twice)
 		if($this->ezs_amount > 0){		
-			$amountParts = explode(".", $this->ezs_amount);
+			$amountParts = preg_split("/[,.]/", $this->ezs_amount);
 		}else{
 			$amountParts[0] = "--";
 			$amountParts[1] = "--";
