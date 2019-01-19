@@ -1,1 +1,4 @@
-**THIS LIBRARY IS NO LONGER MAINTAINED!**<br>Better have a look at <https://github.com/ravage84/SwissPaymentSlip/>
+**THIS LIBRARY IS NO LONGER MAINTAINED!**<br>
+For future QR bills, see https://github.com/sprain/php-swiss-qr-bill
+
+If you prefer old-school payment slips, check out <https://github.com/ravage84/SwissPaymentSlip/>
